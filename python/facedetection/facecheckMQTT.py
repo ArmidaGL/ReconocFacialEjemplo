@@ -37,6 +37,7 @@ def main(argv):
    client = mqtt.Client()
    client.on_connect = on_connect
    client.connect("localhost", 1883, 60)
+   
    client.publish('codigoIoT/py', payload=result, qos=0, retain=False)
    #for i in range(3):
       #client.publish('codigoIoT/py', payload=dff.to_string(), qos=0, retain=False)
